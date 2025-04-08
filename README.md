@@ -10,7 +10,6 @@ This project is a full-stack ride-booking application inspired by Uber. It allow
 - [Setup Instructions](#setup-instructions)
 - [Environment Variables](#environment-variables)
 - [API Endpoints](#api-endpoints)
-- [License](#license)
 
 ---
 
@@ -88,9 +87,30 @@ MAPS_API=<your_google_maps_api_key>
    npm run dev
 **Environment Variables:**
 Backend:
-DB_CONNECT: MongoDB connection string.
-JWT_SECRET: Secret key for JWT authentication.
-GOOGLE_MAPS_API: Google Maps API key.
+ DB_CONNECT: MongoDB connection string.
+ JWT_SECRET: Secret key for JWT authentication.
+ GOOGLE_MAPS_API: Google Maps API key.
 Frontend:
-VITE_BASE_URL: Base URL for the backend API.
-VITE_GOOGLE_MAPS_API_KEY: Google Maps API key.
+ VITE_BASE_URL: Base URL for the backend API.
+ VITE_GOOGLE_MAPS_API_KEY: Google Maps API key.
+API Endpoints
+User Endpoints:
+ POST /users/register: Register a new user.
+ POST /users/login: Login a user.
+ GET /users/profile: Get user profile.
+ GET /users/logout: Logout a user.
+Captain Endpoints:
+ POST /captains/register: Register a new captain.
+ POST /captains/login: Login a captain.
+ GET /captains/profile: Get captain profile.
+ GET /captains/logout: Logout a captain.
+Ride Endpoints:
+ POST /rides/create: Create a new ride.
+ GET /rides/get-fare: Get fare estimate.
+ POST /rides/confirm: Confirm a ride.
+ GET /rides/start-ride: Start a ride.
+ POST /rides/end-ride: End a ride.
+Maps Endpoints:
+ GET /maps/get-coordinates: Get coordinates for an address.
+ GET /maps/get-distance-time: Get distance and time between two locations.
+ GET /maps/get-suggestions: Get location suggestions.
